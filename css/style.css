@@ -172,7 +172,7 @@ body { background-color: rgb(5, 5, 5); font-size: 16px; line-height: 1.8; color:
 } 
 
 @media (max-width: 500px) {
-  .h1-stylo{font-size:40px;}
+  .h1-stylo{font-size:35px;}
   body{font-size: 14px;}
 } 
 
@@ -213,22 +213,22 @@ body { background-color: rgb(5, 5, 5); font-size: 16px; line-height: 1.8; color:
 @media (max-width: 785px) {
   .project-item{
     margin-top: 15%;
-  padding: 10%;} 
+  } 
 } 
 
-@media (max-width: 785px) {
+/* @media (max-width: 785px) {
   .project-item1{
   padding: 10%;} 
-} 
+}  */
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .project-item{padding: 4%;} 
   .project-item1{padding: 4%;} 
 } 
 
 .project-detail{
   padding-right: 5%;
-} 
+}  */
 
 a.discuss{
   color:#f5c263;
@@ -316,9 +316,9 @@ a:hover, a:active, a:focus { text-decoration: none; outline: none; }
 
 @media (max-width: 767.98px) { .container-fluid { padding-left: 15px; padding-right: 15px; } }
 
-.drew-section { padding: 7em 0; }
+.drew-section { padding: 6em 0; }
 
-@media (max-width: 991.98px) { .drew-section { padding: 3em 0; } }
+@media (max-width: 991.98px) { .drew-section { padding: 2em 0; } }
 
 .drew-section h2 { line-height: 1.5; }
 
