@@ -223,19 +223,15 @@ body { background-color: rgb(5, 5, 5); font-size: 16px; line-height: 1.8; color:
   } 
 } 
 
-/* @media (max-width: 785px) {
-  .project-item1{
-  padding: 10%;} 
-}  */
-
-/* @media (max-width: 500px) {
-  .project-item{padding: 4%;} 
-  .project-item1{padding: 4%;} 
+.skill-style{
+  margin-top: 10vh;
 } 
 
-.project-detail{
-  padding-right: 5%;
-}  */
+@media (max-width: 785px) {
+  .skill-style{
+    margin-top: 5vh;
+  } 
+} 
 
 a.discuss{
   color:#f5c263;
