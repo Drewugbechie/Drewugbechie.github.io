@@ -153,7 +153,8 @@ body { background-color: rgb(5, 5, 5); font-size: 16px; line-height: 1.8; color:
 } 
 
 .skill-style{
-  margin-top: 30vh;
+  margin-top: 30vh; 
+  padding-top: 10%;
 } 
 
 @media (max-width: 785px) {
