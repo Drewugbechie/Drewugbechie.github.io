@@ -244,19 +244,19 @@
         </div>
 
         <div data-aos="fade-up";>
-          <form action="#" method="post">
+          <form method="post" name="myemailform" action="form-to-email.php">
             <div class="row">
               <div class="col-md-6  mb-4">
-                <input type="text" class="form-control" placeholder="Name or Company" style="border-radius: 0px;">
+                <input type="text" class="form-control" name="name" placeholder="Name or Company" style="border-radius: 0px;">
               </div>
               <div class="col-md-6  mb-4">
-                <input type="email" class="form-control" placeholder="Email Address" style="border-radius: 0px;">
+                <input type="email" class="form-control" name="email" placeholder="Email Address" style="border-radius: 0px;">
               </div>
             </div>
             
             <div class="row">
               <div class="col-md-12  mb-4">
-                <textarea name="" class="form-control" id="" cols="30" rows="3" placeholder="Write your message" style="border-radius: 0px;"></textarea>
+                <textarea name="" class="form-control" name="message" cols="30" rows="3" placeholder="Write your message" style="border-radius: 0px;"></textarea>
               </div>
             </div>
             <div class="row">
@@ -288,7 +288,14 @@
       </div>
   
   <script src="js/scripts-all.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js"></script> 
+
+  <script language="JavaScript">
+    var frmvalidator  = new Validator("contactform");
+    frmvalidator.addValidation("name","req","Please provide your name");
+    frmvalidator.addValidation("email","req","Please provide your email");
+    frmvalidator.addValidation("email","email", "Please enter a valid email address");
+  </script>
   
   </body>
 </html>
