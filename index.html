@@ -54,8 +54,8 @@
         </div>
     
         <div data-aos="fade-up"; class="hero-info">
-          <h1 class="h1-stylo">In this moment, there are two things I'm most sure of. <br> 1. You need a designer. <br> 2. There is no such thing as no design. </h1>
-          
+          <h1 class="h1-stylo"><span style="font-size: 14px; font-family:Avenir Next Cyr, 'Jost', sans-serif;"; color: #e2ac49;>Hello, I am </span><br> Andrew Ugbechie <br> a product designer.</h1>
+          <p style="margin-top: 20px; max-width:550px; font-family: Avenir Next Cyr, 'Jost', sans-serif;">I specialize in <span style="color: #e2ac49;">UX and Visual Design</span> where I craft beautiful and intuitive digital experiences tailored to meet the needs of users. 🧔🏾</p>
           <button class="button button--yellow" style="margin-top: 20px; vertical-align:middle"><a href="#projects"><span style="color:#0f0f0f">See selected projects </span></a></button>
         </div>
               
@@ -64,10 +64,7 @@
 
 
       <!-- END section -->
-      <section class="drew-section skill-style" style="font-family: Minion Pro, serif; margin-top:40px; margin-bottom: 10vh;"> 
-
-        <p style="margin-top: 20px; max-width:550px; font-family: Avenir Next Cyr, 'Jost', sans-serif;">My name is Andrew Ugbechie and I specialize in <span style="color: #e2ac49;">UX and Visual Design</span> where I craft beautiful and intuitive digital experiences tailored to meet the needs of users. 🧔🏾</p> 
-        
+      <section class="drew-section skill-style" style="font-family: Minion Pro, serif; margin-top:40px; margin-bottom: 10vh;">
         <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
   
           <div class="row">
@@ -246,7 +243,30 @@
           <p>If you would like to talk about your next project, or if you would simply like to say hello, please leave me a message at <span><a href="mailto:hello@drewugbechie.com" style="color: #e2ac49; text-decoration: underline;">hello@drewugbechie.com</a></span> or fill out the form below. I reply under 24 hours.</p>
         </div>
 
-        
+        <div data-aos="fade-up";> 
+
+          <form action="contact.php" method="post" id="myForm" onsubmit="validateForm();return false">
+            <div class="row">
+              <div class="col-md-6  mb-4">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name or Company" style="border-radius: 0px;" >
+              </div>
+              <div class="col-md-6  mb-4">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" style="border-radius: 0px;" >
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-12  mb-4">
+                <textarea name="" class="form-control" id="message" name="message" cols="30" rows="3" placeholder="Write your message" style="border-radius: 0px;" ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4  mb-4">
+                <input type="submit" class="button button--yellow" value="Send Message">
+              </div>
+            </div>
+          </form>
+        </div>
           
             <div class="row drew-footer" style="padding-top: 8%;">
               <div class="col-md-6 text-md-left" style="font-size: 12px;">
@@ -259,9 +279,7 @@
                 <a href="https://dribbble.com/andrewugbechie" target="_blank" class="p-3"><span class="icon-dribbble2"></span></a>
                 <a href="https://www.twitter.com/drew_certified" target="_blank" class="p-3"><span class="fa fa-twitter"></span></a>
               </div>
-            </div> 
-
-            
+            </div>
           
       </footer>
   
@@ -272,6 +290,62 @@
   
   <script src="js/scripts-all.js"></script>
   <script src="js/main.js"></script>
+  
+  <script type="text/javascript">
+    function validateName() {
+        var name = document.getElementById('name').value;
+        if(name.length == 0) {
+          alert("Name can't be blank") ;
+          return false;
 
+        }
+        if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
+          alert("Please enter your correct name") ;//Validation Message
+          return false;
+        }
+        return true;
+      }
+
+    function validateEmail () {
+        var email = document.getElementById('email').value;
+        if(email.length == 0) {
+          alert("Email can't be blank") ;//Validation Message
+          return false;
+
+        }
+        if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+          alert("Please enter a correct email address") ;//Validation Message
+          return false;
+        }
+        return true;
+      }
+
+    function validateMessage() {
+        var message = document.getElementById('message').value;
+        if(message.length == 0) {
+          alert("Message can't be blank") ; //Validation Message
+          return false;
+
+        }
+        return true;
+      }
+
+
+        function validateForm() {
+          if (!validateName() || !validateEmail() || !validateMessage()) {
+
+            alert("Fill missing field");//Validation Message
+            return false; 
+          }
+          else {
+            submitted=true; 
+            alert('Your message has been submitted!');
+            return false;
+            
+          } 
+          document.getElementById("myForm").reset();
+        
+        }
+        </script>
   </body>
 </html>
