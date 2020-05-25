@@ -192,7 +192,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 @media (max-width: 500px) {
   .h1-stylo{font-size:35px;}
-  body{font-size: 14px;}
+  body{font-size: 16px;}
 } 
 
 .h1-styles{
